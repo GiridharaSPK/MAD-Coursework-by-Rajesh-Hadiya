@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ClickCounterXML</string>
+    <string name="click_count">Click Count</string>
+    <string name="button">Button</string>
+</resources>
