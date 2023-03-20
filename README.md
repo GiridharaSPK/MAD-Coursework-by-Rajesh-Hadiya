@@ -12,6 +12,6 @@ Compose             |  XML
 <img src='https://github.com/GiridharaSPK/MAD-Coursework-by-Rajesh-Hadiya/blob/main/Assignment%202/users_lazycolumns.gif' title='Compose Users List GIF' width='' alt='GIF Walkthrough' /> 
 
 
-## Assignment 3 : Users List - Jetpack Navigation + Room Database + Hilt + DataStore(have to update)
+## Assignment 3 : Users List - Coroutines + StateFlow + MVVM + Jetpack Navigation + Room Database + Hilt + DataStore(have to update)
 
 <img src='https://github.com/GiridharaSPK/MAD-Coursework-by-Rajesh-Hadiya/blob/main/Assignment%203/RoomAndNavigation.gif' title='Room and Jetpack Navigation GIF' width='' alt='GIF Walkthrough' /> 
