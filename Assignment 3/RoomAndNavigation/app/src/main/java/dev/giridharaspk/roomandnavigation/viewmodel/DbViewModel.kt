@@ -19,14 +19,15 @@ import javax.inject.Inject
 @HiltViewModel
 class DbViewModel @Inject constructor(
     private val dbRepository: DbRepository,
-//    private val dataStoreManager: DataStoreManager
+    private val dataStoreManager: DataStoreManager
 ) : ViewModel() {
     private val _users = MutableStateFlow<MutableList<User>?>(null)
     val users: StateFlow<MutableList<User>?> = _users.asStateFlow()
 
     private val _selectedUser = MutableStateFlow<User?>(null)
     val selectedUser: StateFlow<User?> = _selectedUser.asStateFlow()
-//    val usersExist = dataStoreManager.usersExist
+
+    val usersExist = dataStoreManager.usersExist
 
 //    private val _users = mutableStateOf<List<User>>(emptyList())
 //    val users: State<List<User>> = _users

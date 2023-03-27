@@ -11,6 +11,7 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -18,6 +19,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.ViewModel
 import androidx.navigation.compose.rememberNavController
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -26,6 +29,7 @@ import dev.giridharaspk.roomandnavigation.datastore.dataStore
 import dev.giridharaspk.roomandnavigation.room.User
 import dev.giridharaspk.roomandnavigation.ui.navigation.MyNavigation
 import dev.giridharaspk.roomandnavigation.ui.theme.RoomAndNavigationTheme
+import dev.giridharaspk.roomandnavigation.viewmodel.DbViewModel
 
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
@@ -38,10 +42,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             RoomAndNavigationTheme {
                 val navController = rememberNavController()
+                val dbViewModel = hiltViewModel<DbViewModel>()
                 Scaffold { innerPadding ->
                     MyNavigation(
                         modifier = Modifier.padding(innerPadding),
-                        navController = navController
+                        navController = navController,
+                        dbViewModel = dbViewModel
                     )
                 }
             }

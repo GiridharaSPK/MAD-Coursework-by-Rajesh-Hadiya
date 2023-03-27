@@ -21,9 +21,8 @@ import dev.giridharaspk.roomandnavigation.ui.screens.UsersListScreen
 fun MyNavigation(
     modifier: Modifier,
     navController: NavHostController,
+    dbViewModel: DbViewModel
 ) {
-    val dbViewModel: DbViewModel = hiltViewModel()
-
     val start = if (dbViewModel.users.collectAsState(initial = null).value?.isEmpty() == true) {
         TopLevelDestination.HomeScreen.route
     } else {
