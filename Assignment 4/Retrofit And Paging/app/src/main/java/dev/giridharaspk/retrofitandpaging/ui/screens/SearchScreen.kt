@@ -88,7 +88,17 @@ fun SearchScreen(
                     }
                 }
             }
-            users.apply {
+/*
+            If you are observing the loadState of a PagingData object using
+            the collect method of a Flow or LiveData, you may initially
+            receive a LoadState.Loading state, even if the PagingData object
+            is empty. This can happen if the PagingSource that is supplying
+            data to the PagingData object needs to load data from a remote
+            data source, for example. In this case, the loadState will change
+            to LoadState.NotLoading or LoadState.Error once the data has
+            been loaded or if an error occurs.
+*/
+           /* users.apply {
                 when {
                     loadState.refresh is LoadState.Loading -> {
                         LoadingProgressBar(modifier = Modifier.fillMaxSize())
@@ -107,25 +117,13 @@ fun SearchScreen(
                     }
 
                     loadState.refresh is LoadState.Error -> {
-                        /* no-op */
+                        // no-op
                     }
 
                     loadState.append is LoadState.Error -> {
                         RetryItem(
                             modifier = Modifier.fillMaxSize(),
                             onRetryClick = { retry() }
-                        )
-                    }
-                }
-            }
-            /* items(
-                count = users?.size ?: 0,
-                key = { it },
-            ) { index ->
-                users?.get(index)?.let { user ->
-                    GithubProfileItem(user) { login ->
-                        navController.navigate(
-                            "${TopLevelDestination.UserDetailScreen.route}/${user.login}"
                         )
                     }
                 }
