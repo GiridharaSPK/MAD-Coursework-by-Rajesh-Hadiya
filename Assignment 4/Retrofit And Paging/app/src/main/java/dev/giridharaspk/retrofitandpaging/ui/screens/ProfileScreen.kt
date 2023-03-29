@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -141,7 +142,8 @@ fun ProfileScreen(
                         Text(
                             text = "Bio : $it",
                             fontSize = 18.sp,
-                            style = MaterialTheme.typography.titleSmall
+                            style = MaterialTheme.typography.titleSmall,
+                            textAlign = TextAlign.Center,
                         )
                         Spacer(modifier = Modifier.height(20.dp))
                     }
@@ -153,7 +155,8 @@ fun ProfileScreen(
                     Text(
                         text = "Github user since $time",
                         fontSize = 18.sp,
-                        style = MaterialTheme.typography.titleSmall
+                        style = MaterialTheme.typography.titleSmall,
+                        textAlign = TextAlign.Center,
                     )
                 }
             }
