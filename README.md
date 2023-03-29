@@ -15,3 +15,7 @@ Compose             |  XML
 ## Assignment 3 : Users List - Coroutines + StateFlow + MVVM + Jetpack Navigation + Room Database + Hilt + DataStore(have to update)
 
 <img src='https://github.com/GiridharaSPK/MAD-Coursework-by-Rajesh-Hadiya/blob/main/Assignment%203/RoomAndNavigation.gif' title='Room and Jetpack Navigation GIF' width='' alt='GIF Walkthrough' /> 
+
+## Assignment 4 : Github Users Search - MVVM + Jetpack Compose + Hilt + Retrofit + Moshi + Paging3
+
+<img src='https://github.com/GiridharaSPK/MAD-Coursework-by-Rajesh-Hadiya/blob/main/Assignment%204/retrofitandpaging.gif' title='Retrofit and Paging GIF' width='' alt='GIF Walkthrough' /> 
