@@ -166,6 +166,10 @@ fun RetryItem(
             Text(text = stringResource(id = R.string.retry))
         }
     }
+    @Composable
+    fun Foo(){
+        Text(text = "1", modifier = Modifier.widthIn(max = 32.dp))
+    }
 }
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalComposeUiApi::class)

@@ -13,7 +13,7 @@ interface GithubApi {
         @Query("q") searchText: String,
         @Query("page") page: Int,
         @Query("per_page") size: Int
-    ): Response<SearchUsersResponse>
+    ): SearchUsersResponse
 
     @GET("users/{username}")
     suspend fun getUserDetails(

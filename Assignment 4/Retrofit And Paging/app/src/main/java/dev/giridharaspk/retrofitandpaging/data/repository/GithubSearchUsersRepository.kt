@@ -30,9 +30,9 @@ class GithubSearchUsersRepository(
                 size = params.loadSize
             )
             LoadResult.Page(
-                data = response.body()?.items!!,
+                data = response.items, //response.body()?.items!!,
                 prevKey = if (page == 1) null else page - 1,
-                nextKey = if (response.body()?.items.isNullOrEmpty()) null else page + 1
+                nextKey = if (response.items.isNullOrEmpty()) null else page + 1
             )
         } catch (e: Exception) {
             LoadResult.Error(e)
